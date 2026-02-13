@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>happy valentine lopp</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #efefef;
+    color: #111;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* PAPER TEXTURE */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(#ddd 1px, transparent 1px);
+    background-size: 4px 4px;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* HEADER */
+header {
+    padding: 50px 20px 20px;
+    animation: fadeDown 1.2s ease;
+}
+
+.logo {
+    width: 110px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: 'Fantasy', cursive;
+    font-size: 48px;
+    margin: 10px 0 5px;
+}
+
+.subtitle {
+    opacity: 0.6;
+    font-size: 14px;
+ margin-top: 15px;
+}
+
+/* FLOATING HEARTS */
+.heart {
+    position: fixed;
+    font-size: 30px;
+    color: #FF5C74;      
+    opacity: 100;          
+    animation: floatUp 5s linear infinite;
+    text-shadow: 0 0 6px rgba(255, 155, 179, 0.4); 
+}
+
+.heart:nth-child(1){ left:10%; animation-delay:0s; }
+.heart:nth-child(2){ left:40%; animation-delay:2s; }
+.heart:nth-child(3){ left:70%; animation-delay:4s; }
+
+/* GALLERY CENTER */
+.gallery {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px 120px;
+}
+
+/* ENVELOPE LINK */
+.envelope-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ENVELOPE LINK */
+.envelope-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ENVELOPE */
+.envelope {
+    width: 270px;
+    height: 190px;
+    background: #ffe4ec;
+    position: relative;
+    box-shadow: 0 12px 25px rgba(255, 150, 180, 0.35);
+    transition: 0.35s;
+    animation: fadeUp 1s ease;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* TOP FLAP */
+.envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95px;
+    background: #ffd3df;
+    clip-path: polygon(0 0, 50% 85%, 100% 0);
+    transform-origin: top;
+    transition: 0.35s;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* HOVER OPEN */
+.envelope:hover::before {
+    transform: rotateX(180deg);
+}
+
+.envelope:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 18px 35px rgba(255, 120, 160, 0.45);
+}
+
+/* LETTER */
+.letter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: white;
+    padding: 12px;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CAPTION */
+.caption {
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.8;
+    margin-top: 6px;
+    color: #ff6f91;
+}
+
+/* HEART SEAL */
+.seal {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff6f91;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    line-height: 34px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+
+/* FOOTER */
+footer {
+    padding: 25px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+    0% { bottom: -50px; opacity: 0; }
+    20% { opacity: 0.4; }
+    80% { opacity: 0.4; }
+    100% { bottom: 110%; opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="heart">♡</div>
+<div class="heart">♡</div>
+<div class="heart">♡</div>
+
+<header>
+    <img src="chiikawa.gif" class="logo" alt="logo">
+    <h1>Happy Valentine’s Day <333</h1>
+    <div class="subtitle">happy valentines dayyyy acankuuuuu :P</div>
+</header>
+
+<section class="gallery">
+
+<a href="https://yourlink.com" class="envelope-link" target="_blank">
+    <div class="envelope">
+
+<div class="seal">❤</div>
+
+        <div class="letter">
+            <img src="https://via.placeholder.com/300" alt="">
+        </div>
+    </div>
+</a>
+
+</section>
+
+<footer>
+    panpan – 2026
+</footer>
+
+</body>
+</html>
